@@ -8,7 +8,16 @@ body {
   color: yellow;
 }
 /* TOTAL PAGE GRID */
-.logo  { grid-area: logo; }
+.logo  { 
+  grid-area: logo;
+  background-color: white;
+  background-image: url(img/bigfoot-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  width: 100%;
+  height: auto;
+}
 .head  { grid-area: head; }
 .nav   { grid-area: nav; }
 .main  { grid-area: main; }
@@ -34,20 +43,14 @@ body {
 .head {
   display: grid;
   grid-template-areas:
-    'h-head h-head h-head'
-    'h-main h-main h-main'
-    'h-foot h-foot h-foot';
+    'h-head h-head h-head h-head'
+    'h-main h-main h-main h-main'
+    'h-foot h-foot h-foot h-foot';
 }
 
 /* LOGO STYLES */
 .logo {
-  background-color: white;
-  background-image: url(img/bigfoot-logo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: 50%;
-  width: 100%;
-  height: 225px;
+  
 }
 
 /* HEADER STYLES */
