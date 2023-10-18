@@ -1,0 +1,111 @@
+<!--
+  Joshua Gregory
+  Professor Montgomery
+  Internet Programming
+  Final Project HTML
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>bigFoot bigData</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src=      "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js">
+      </script>
+  </head>
+
+  <body>
+    <!-- grid wrapper -->
+    <div class="container" id="p2-container">
+
+      <!-- TOP-RIGHT: 1 row x 2 cols -->
+      <header class="head" id="p2-head">
+        <center>
+          <h1>The bigData on bigFoot:</h1>
+          <h3>Bigfoot Data Science in JavaScript</h3>
+        </center>
+      </header>
+
+      <!-- MID-LEFT: 1 row x 1 col -->
+      <nav class="nav" id="p2-nav">
+        <center>
+        <button class="nav-btn" id="p2-home-btn">
+          <a href="index.html">Home Page</a>
+        </button>
+        <button class="nav-btn" id="p2-page2-btn">
+          <a href="page2.html">Walkthrough</a>
+        </button>
+        <button class="nav-btn" id="p2-gh-btn">
+          <a href="https://github.com/joshtype/bigFeet_bigData.git">
+            GH Repo
+          </a>
+        </button>
+        <button class="nav-btn" id="p2-kaggle-btn">
+          <a href="https://www.kaggle.com/datasets/chemcnabb/bfro-bigfoot-sighting-report/">
+            Kaggle
+          </a>
+        </button>
+        </center>
+      </nav>
+
+      <!-- MID-MID: 1 row x 1 col -->
+      <main class="main" id="p2-main">
+        <h1>Walkthrough:</h1>
+        <p class="intro" id="p2-intro">
+          I found the csv dataset I used hosted on Kaggle (linked
+          above) It was assembled by the BFRO (Bigfoot Field
+          Research Organization). Included were several datapoints
+          on thousands of bigfoot sightings across the U.S. Data
+          existed for sightings from the mid-1970s to mid-2010s.
+          <br><br>
+          The most important thing when working with data in 
+          csv (comma-seperated-values) is ensuring the data is
+          clean and relevant. All the summarizations, visualizations, 
+          and predictions that follow are only as accurate as the raw 
+          data. Applying data science principles to the raw csv file 
+          presented some unique challenges. Python is the industry 
+          standard language for Data Science for good reason, to be 
+          objective. This is due to Python libraries like Pandas, 
+          Numpy, and Matplotlib. These three combine to offe a suite  
+          of functionality that allows devs to fairly easily apply 
+          formal statistical methods to datapoints stored in csv 
+          format. After loading a csv into a Pandas DataFrame, a dev 
+          can read, clean, manipulate, summarize, visualize, and infer 
+          data.  
+          <br>
+          Accomplishing the same functionality with csv data in 
+          Javascript is not quite as simple I used the d3 library to 
+          read and clean the csv file. Visualizations were made using 
+          Chart.js. Though d3.js does offer charting tools, they are 
+          rendered as svg files. Chart.js renders charts using an 
+          HTML5 canvas which makes it a great option for use with the 
+          DOM api. For data prediction, I chose Tensorflow.js, a 
+          recognized leader in machine learning and AI functionality. 
+          <br><br>
+          Below is a description with screenshots of the steps I took 
+          to read, clean, summarize, and visualize the data as well as 
+          build a neural network to make regressive predictions.
+        </p>
+        <p class="summary" id="p2-summary">
+          Summary...
+        </p>
+
+        <!-- Tensorflow predictions: -->
+        <p id="text"></p>
+      </main>
+
+      <!-- BOTTOM-ALL: 1 row x all cols -->
+      <footer class="foot" id="p2-foot">
+        <p class="footer-text">
+          &copy;2023, Joshua Gregory
+        </p>
+      </footer>
+
+    </div> <!-- close grid -->
+    <script src="script.js"></script>
+    <script src="https://replit.com/public/js/replit-
+      badgev2.js" theme="dark" position="bottom-right">       
+    </script>
+  </body>
+</html>

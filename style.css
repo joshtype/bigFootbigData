@@ -8,20 +8,9 @@ body {
   color: yellow;
 }
 /* TOTAL PAGE GRID */
-.logo  { 
-  grid-area: logo;
-  background-color: white;
-  background-image: url(img/bigfoot-logo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: 50%;
-  width: 100%;
-  height: auto;
-}
 .head  { grid-area: head; }
 .nav   { grid-area: nav; }
 .main  { grid-area: main; }
-.misc  { grid-area: misc; }
 .foot  { grid-area: foot; }
 .container {
   display: grid;
@@ -31,52 +20,48 @@ body {
   grid-row-gap: .5em;
   grid-column-gap: .5em;
   grid-template-areas: 
-    'logo head head head'
-    'nav main main misc'
+    'head head head head'
+    'nav nav nav nav'
+    'main main main main'
     'foot foot foot foot';
 }
 
-/* HEADER SUBGRID */
-.header-head { grid-area: h-head; }
-.header-main { grid-area: h-main; }
-.header-foot { grid-area: h-foot; }
-.head {
-  display: grid;
-  grid-template-areas:
-    'h-head h-head h-head h-head'
-    'h-main h-main h-main h-main'
-    'h-foot h-foot h-foot h-foot';
+/* GLOBAL BUTTON & LINK STYLES */
+.nav-btn {
+  width: 150px;
+  height: 75px;
+  background-image: url(img/bigfoot-logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100px;
 }
 
-/* LOGO STYLES */
-.logo {
-  
+a {
+  color: orangered;
+  text-decoration: none;
+  font-size: 1.5em;
+  background-color: white;
+}
+a:hover {
+  color: orangered;
+  text-decoration: none;
+  font-size: 1.75em;
+  background-color: white;
 }
 
 /* HEADER STYLES */
-.header-main {
+.head {
   border: 1px solid white;
+  color: red;
+  width: 100%;
   height: 225px;
   background-image: url(img/header-img2.png);
   background-size: cover;
   background-position-y: 78%;
-  color: orangered;
-}
-.header-head {
-  background-color: white;
-  font-size: 16pt;
-  font-weight: 700;
-}
-.header-foot {
-  background-color: white;
-  font-weight: 600;
 }
 
 /* NAV STYLES */
-.nav {
-  border: 1px solid white;
-  width: 100%;
-}
+
 
 /* MAIN STYLES */
 .main {
