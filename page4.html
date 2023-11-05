@@ -1,0 +1,104 @@
+<!--
+  Joshua Gregory
+  Professor Montgomery
+  Internet Programming
+  Final Project HTML
+-->
+<!-- Tensorflow Prediction Page -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>bigFoot bigData</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- tensorflow.js CDN -->
+    <script src=      "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js">
+    </script>
+  </head>
+
+  <body>
+    <!-- grid wrapper -->
+    <div class="container" id="p4-container">
+
+      <!-- TOP-RIGHT: 1 row x 2 cols -->
+      <header class="head" id="p4-head">
+        <!-- banner goes here -->
+      </header>
+
+      <!-- MID-LEFT: 1 row x 1 col -->
+      <nav class="nav" id="p4-nav">
+        <center>
+          <div class="nav-row" id="nav-logo">
+            <!-- circle logo here -->
+          </div>
+          <a href="index.html" id="nav-link">Home Page</a><br>
+          <br><a href="page2.html" id="nav-link">Walkthrough</a><br>
+          <br><a href="page3.html" id="nav-link">Visualization</a><br>
+          <br><a href="page4.html" id="nav-link">Prediction</a><br>
+          <br><a href="https://github.com/joshtype/bigFeet_bigData.git"
+            id="nav-link">GitHub Repo</a><br>
+          <br><a href="https://www.kaggle.com/datasets/chemcnabb/bfro-bigfoot-
+                sighting-report/" id="nav-link">Kaggle</a><br><br>
+        </center>
+      </nav>
+
+      <!-- SMALLER SCREEN NAVBAR MID: 1 row x all cols -->
+      <span class="sm-nav" id="p4-sm-nav">
+        <select onChange="window.location.href=this.value"
+          class="drop-nav" id="sm-drop-nav">
+          <option value="" class="drop-link">Select a Page</option>
+          <option value="./index.html" class="drop-link">Home Page</option>
+          <option value="./page2.html" class="drop-link">Walkthrough</option>
+          <option value="./page3.html" class="drop-link">Visualization</option>
+          <option value="./page4.html" class="drop-link">Prediction</option>
+          <option value="https://github.com/joshtype/bigFeet_bigData.git"
+            class="drop-link">GitHub Repo</option>
+          <option value="https://www.kaggle.com/datasets/chemcnabb/bfro-bigfoot-
+            sighting-report/" class="drop-link">Kaggle</option>
+        </select>
+      </span>
+
+      <!-- MID-MID: 1 row x 1 col -->
+      <main class="main" id="idx-main">
+        <span class="page-subtitle" id="p1-page-subtitle">
+          Tensorflow.js Predictions
+        </span>
+        <p id="prediction"><!-- TF prediction --></p>
+      </main>
+
+      <!-- BOTTOM-ALL: 1 row x all cols -->
+      <footer class="foot" id="p2-foot">
+        <center>
+          <p id="contact-info">
+            studentDesigns LLC:<br>
+            1 Bigfoot Way; Forest Cave, NA; 10101<br><br>
+            <button class="contact-btn" id="mail-btn">
+              <a href="mailto: gregory_joshua2@students.columbusstate.edu"
+                class="contact-link">
+                <img src="img/icons/mail-icon1.png" id="mail-ico"
+                  class="contact-ico" width="50%">
+              </a></button>
+            <button class="contact-btn" id="phone-btn">
+              <a href="tel: +15555555555" class="contact-link">
+                <img src="img/icons/ph-ico-blk.png" id="ph-ico-blk"
+                  class="contact-ico" width="50%"></a>
+            </button>
+          </p>
+          <p id="copyright-info">
+            &copy;2023 Joshua Gregory
+          </p>
+        </center>
+      </footer>
+
+    </div> <!-- close grid -->
+
+    <!-- import js for sitewide datetime in footer -->
+    <script src="script-all-date.js"></script>
+    <!-- import js for tensorflow js prediction -->
+    <script src="script-p4-tf.js"></script>
+    <script src="https://replit.com/public/js/replit-
+      badgev2.js" theme="dark" position="bottom-right">       
+    </script>
+  </body>
+</html>

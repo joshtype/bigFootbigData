@@ -1,0 +1,118 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+raw = pd.read_csv("data/bigfoot-sightings.csv") # read/store raw csv
+df = pd.DataFrame(raw)  # load to DF
+
+################
+#  CLEAN DATA  #
+################
+# slice relevant 'timestamp' values to new cols (truncating flawed vals)
+df['mm'] = df['timestamp'].str.slice(5,7) # months
+df['dd'] = df['timestamp'].str.slice(8,10)   # days 
+df['yyyy'] = df['timestamp'].str.slice(0,4)  # years
+
+# drop unnecessary 'timestamp' col
+df2 = df.drop('timestamp', axis=1)
+# drop irelevant description col
+df3 = df2.drop('title', axis=1)
+# drop irrelevant id number col
+df4 = df.drop('number', axis=1)
+
+#############################
+#  PREPARE DATA FOR EXPORT  #
+#############################
+# store data as variables
+dd = df4.dd
+mm = df4.mm
+year = df4.yyyy
+lat = df4.latitude
+lon = df4.longitude        
+grade = df4.classification
+num_sights = len(df.index)  # total len
+
+# store day values to sorted arr & set
+d_arr = []
+for x in dd:
+  d_arr.append(x)
+d_arr.sort()
+d_set = set(d_arr)
+
+# store month values to sorted arr & set
+m_arr = []
+for x in mm:
+  m_arr.append(x)
+m_arr.sort()
+m_set = set(m_arr)
+
+# store year values to sorted arr & set
+y_arr = []
+for x in year:
+  y_arr.append(x)
+# years include outlier values 1869 & 2053 that 
+# need to be normalized by setting to adj value
+# not removing the values to perserve data len
+y_arr[0] = y_arr[1]
+y_arr[len(y_arr)-1] = y_arr[len(y_arr)-2]
+y_arr.sort()
+y_set = set(y_arr)
+
+##########################
+#  EXPORT DATA TO FILES  #
+##########################
+# length of cleaned dataset
+f = open("data/data_len.txt", "w+")
+f.write(str(num_sights))
+f.close()
+
+# raw year values
+f = open("data/year_data.txt", "w+")
+for x in y_arr:
+  f.write(str(x) + ", ")
+f.write("\n")
+f.close()
+
+# unique year values
+f = open("data/year_data_uniques.txt", "w+")
+for x in y_set:
+  f.write(str(x) + ", ")
+f.write("\n")
+f.close()
+
+# raw month values
+f = open("data/month_data.txt", "w+")
+for x in m_arr:
+  f.write(str(x) + ", ")
+f.write("\n")
+f.close()
+
+# unique month values
+f = open("data/month_data_uniques.txt", "w+")
+for x in m_set:
+  f.write(str(x) + ", ")
+f.write("\n")
+f.close()
+
+# raw day values
+f = open("data/day_data.txt", "w+")
+for x in d_arr:
+  f.write(str(x) + ", ")
+f.write("\n")
+f.close()
+
+# unique day values
+f = open( "data/day_data_uniques.txt", "w+")
+for x in d_set:
+  f.write(str(x) + ", ")
+f.write("\n")
+f.close()
+
+# lat values
+f = open("data/lat.txt", "w+")
+f.write(str(lat))
+f.close()
+
+# lon values
+f = open("data/lon.txt", "w+")
+f.write(str(lon))
+f.close()

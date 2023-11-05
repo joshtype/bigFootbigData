@@ -1,4 +1,7 @@
-
+// Joshua Gregory
+// Professor Montgomery
+// Internet Programming
+// Tensorflow Prediction Page
 
 // define a function that trains a tensorflow model
 const getPrediction = function() {
@@ -11,7 +14,8 @@ const getPrediction = function() {
   const ys = tf.tensor2d([1, 3, 5, 7], [4, 1]);
 
   model.fit(xs, ys, {epochs: 10}).then(() => {
-    document.getElementById("text").innerHTML = model.predict(tf.tensor2d([5], 
+    document.getElementById("prediction").innerHTML = 
+      model.predict(tf.tensor2d([5], 
       [1, 1]));
   });
 };
