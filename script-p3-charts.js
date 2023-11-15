@@ -6,26 +6,23 @@
 // ORIGINAL DATA HOSTED AT:
 // www.kaggle.com/datasets/chemcnabb/bfro-bigfoot-sighting-report
 
-// CALL ASYNC FUNCTION, PASSING IN EACH CSV
-
+// call function
 getData();
 
-// DEFINE ASYNCH FUNCTION TO LOAD CSVs
+// define async function to load classifcation grade csv
 async function getData() {
-  // fetch the csv file, wait for reply, store in vars
-  const response = await fetch("dataset/day_data_uniques.csv");
+  // fetch the csv file, wait for reply
+  const response = await fetch("dataset/grade_class.csv");
   const data = await response.text();
+  
+  let a = 0, b = 0, c = 0;
 
-  // split into arr, delimiters = new lines
-  const rows = data.split("\n");
+  // split into arr, delimited by new lines
+  const tbl = data.split("\n");
+  const col = tbl[10].slice(1).split(",");
 
-  rows.forEach(elt => {
-    const row = elt.split(",");
-    const day = row[0];
-    document.getElementById("js-chart1").innerHTML = day;
-  })
+  document.getElementById("js-chart1-info").innerHTML = col;
 };
-
 
 // open full size img of charts
 const pyChart1 = document.getElementById("py-chart1");

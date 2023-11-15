@@ -55,12 +55,11 @@ a:hover {
 /* HEADER STYLES */
 .head {
   border: 2px solid darkslategray;
+  background-image: url("img/banner-big.png");
   width: 100%;
-  height: 25rem;
-  background-image: url(img/banner-big.png);
-  background-size: cover;
+  height: 30rem;
   background-repeat: no-repeat;
-  background-position: center;
+  background-size: cover;
 }
 
 /* NAVBAR STYLES */
@@ -210,6 +209,10 @@ a:hover {
 }
 #dot2, #dot3, #dot4 { 
   background-color: white; 
+}
+
+.chart-code {
+  background-color: whitesmoke;
 }
 
 /***************************************/

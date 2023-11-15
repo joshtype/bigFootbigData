@@ -70,69 +70,108 @@
           Data Visualizations
         </span>
 
-        <fieldset class="js-charts">
+        <!-- JS CHARTS -->
+        <fieldset class="jschart-field">
+          <span class="page-subtitle">
+            Javascript + Chart.js
+          </span><br>
+          
+          <p class="chart-info" id="js-chart-info">
+            Below are three charts created with Javascript, Fetch API,
+            and Chart.js. Visit the <a href="page2.html">Walkthrough</a>
+            page for more information regarding the data.
+          </p>
+          
           <!-- chart.js #1 -->
-          <div class="js-chart" id="js-chart1">
-            abc
+          <div class="js-chart-container" id="js-chart1-container">
+            <canvas class="js-chart-canvas" id="js-chart1-canvas">
+              <!-- js chart #1 goes here -->
+            </canvas>
+            <p class="chart-info" id="js-chart1-info">
+              The above chart is a pie chart depicting classifcation grade
+              data points as pie wedges.<br>
+              From this, it can be observed that almost every sighting is 
+              graded as Class A or Class B. An extremely slim portion of 
+              sightings are graded as Class C.
           </div>
 
           <!-- chart.js #2 -->
-          <div class="js-chart" id="js-chart2">
-            abc
+          <div class="js-chart-container" id="js-chart2-container">
+            Vertical Histogram of Sightings per Month of Year:
+            <canvas class="js-chart-canvas" id="js-chart2-canvas">
+              <!-- js chart #2 goes here -->
+            </canvas>
           </div>
 
           <!-- chart.js #3 -->
-          <div class="js-chart" id="js-chart3">
-            abc
+          <div class="js-chart-container" id="js-chart3-container">
+            <canvas class="jschart-canvas" id="jschart3-canvas">
+              <!-- js chart #3 goes here -->
+            </canvas>
           </div>
-        </fieldset>
+        </fieldset>  <!-- close js chart field -->
 
-        <fieldset class="python-charts">
+        <!-- PYTHON CHARTS -->
+        <fieldset class="py-chart-field">
           <span class="page-subtitle">
-            Python + Matplotlib Charts
+            Python + Pandas + Matplotlib
           </span><br>
-          <p class="chart-info">
+          
+          <p class="chart-info" id="py-chart1-info">
             These are the charts from the same data values.
-            These were made in Google Colab using Python + Pandas + 
-            Matpolotlib. Pleae visit the 
-            <a href="page2.html">Walkthrough page</a> for more
-            information about the data.
+            These were made in Google Colab using Python, Pandas, and 
+            Matpolotlib. Visit <a href="page2.html">Walkthrough page</a> 
+            for detailed information regarding the dataset.
           </p>
-
+          
           <!-- python chart #1 -->
-          <div class="py-chart" id="py-chart1">
-            Histogram of Sightings per Classification Grades:<br>
-            <img src="img/py-charts/histo_gradePerSightings.png"
+          <div class="py-chart-contariner" id="py-chart1-container">
+            Pie Chart of Classification Grades:<br>
+            <img src="img/py-charts/pie_classGrades.png"
               alt="Histogram of classification grades per sighting" 
-              width="50%" height="50%" /><br>
-            <code>
-              # python code:<br>
+              width="50%" height="50%" /><br><br>
+            Python used to create chart:<br>
+            <code class="chart-code" id="py-chart1-code">
+              wdg_labels = ["Class A \n (1,895 Sightings)",<br>
+              &ensp;&ensp;&ensp;&ensp;"Class B \n (1,896 Sightings)",<br>
+              &ensp;&ensp;&ensp;&ensp;"Class C \n (19 Sightings)"]<br>
+              wdg_colors = ["blue", "yellow", "red"]<br>
+              plt.pie(num_ea_grade, labels=wdg_labels, startangle=90,<br>
+              &ensp;&ensp;&ensp;&ensp;colors=wdg_colors, shadow=True)<br>
+              plt.title("Proportions of Classification Grades")<br>
+              plt.show()
+            </code>
+          </div><br><br>
+          
+          <!-- python chart #2 -->
+          <div class="py-chart-container" id="py-chart2-container">
+            Vertical Histogram of Sightings Per Month of Year:<br>
+            <img src="img/py-charts/histo_monthPerSightings.png"
+              alt="Histogram of sightings per reported months"
+              width="50%" height="50%" /><br><br>
+            Python used to create chart:<br>
+            <code class="chart-code" id="py-chart2-code">
               plt.hist(grade)<br>
               plt.ylabel("Number of Sightings")<br>
               plt.xlabel("Classification of Each Sighting")<br>
               plt.yticks(range(0,1950,75))<br>
               plt.figure(figsize=(8,8))<br>
-              plt.show()
+              plt.show()<br>
             </code>
           </div><br><br>
-          <!-- python chart #2 -->
-          <div class="py-chart" id="py-chart2">
-            Histogram of Sightings Per Month:<br>
-            <img src="img/py-charts/histo_monthPerSightings.png"
-              alt="Histogram of sightings per reported months"
-              width="50%" height="50%" /><br>
-            <code>
-              # python code:<br>
-            </code>
-          </div><br><br>
+          
           <!-- python chart #3 -->
-          <div class="py-chart" id="py-chart3">
-            Histogram of Sightings Per Days:<br>
+          <div class="py-chart-container" id="py-chart3-container">
+            Horizontal Histogram of Sightings Per Day of Month:<br>
             <img src="img/py-charts/histo_dayPerSightings.png"
               alt="Histogram of sightings per reported days"
-              width="50%" height="50%" /><br>
-            <code>
-              # python code:<br>
+              width="50%" height="50%" /><br><br>
+            Python used to create chart:<br>
+            <code class="chart-code" id="py-chart3-code">
+              plt.hist(mm)<br>
+              plt.xlabel("Month")<br>
+              plt.ylabel("Number of Sightings")<br>
+              plt.show()<br>
             </code>
           </div>
         </fieldset>
@@ -168,7 +207,7 @@
     <!-- sitewide datetime js -->
     <script src="script-all-date.js"></script>
     <!-- data visualization js -->
-    <script src="script-p3charts.js"></script>
+    <script src="script-p3-charts.js"></script>
     <!-- Replit js -->
     <script src="https://replit.com/public/js/replit-
       badgev2.js" theme="dark" position="bottom-right">       
