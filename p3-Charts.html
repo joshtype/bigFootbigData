@@ -1,0 +1,262 @@
+<!--
+  Joshua Gregory
+  Professor Montgomery
+  Internet Programming
+  Final Project HTML
+-->
+<!-- Greeting & Registration Web Form Page -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>bigFoot(charts)</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href=
+      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+    <!-- Bootstrap JS CDN -->
+    <script src=
+      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Local CSS -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!-- GRID CONTAINER -->
+    <div class="container-fluid" id="page-grid">
+
+      <!-- HEADER: top row x 12 cols -->
+      <header class="row">
+        <div class="container-fluid rounded bg-primary text-white" 
+          id="header-row">
+          <p class="display-1">bigFoot(bigData)</p>
+          <p class="display-4">Javascript + Data Science + Bigfoot</p>
+        </div>
+      </header>
+
+      <!-- NAVBAR: 2nd row x 12 cols, collapses on screens <= 576px -->
+      <nav class="row">
+        <div class="navbar navbar-expand-sm bg-light navbar-light rounded"
+          id="nav-row">
+          
+          <div class="container-fluid" id="nav-container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#collapsibleNavbar" id="nav-dropdown">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav nav-tabs" id="nav-ul">
+
+                <!-- navbar brand img -->
+                <li class="nav-item" id="nav-li">
+                  <a class="navbar-brand" href="#" id="logo-link"
+                    onclick="logoClick()">
+                    <img src="imgs/logo-sm.png" alt="bigfoot logo" 
+                      id="logo-img" /></a>
+                </li>
+                <!-- navigation links -->
+                <li class="nav-item" id="nav-li">
+                  <a href="p1-home.html" class="nav-link active" id="home-link">
+                    Home Page</a>
+                </li>
+                <li class="nav-item" id="nav-li">
+                  <a href="p2-Walkthru.html" class="nav-link" id="p2-link">
+                    Walkthrough</a>
+                </li>
+                <li class="nav-item" id="nav-li">
+                  <a href="p3-Charts.html" class="nav-link" id="p3-link">
+                    Visualizations</a>
+                </li>
+                <li class="nav-item" id="nav-li">
+                    <a href="p4-Predict.html" class="nav-link" id="p4-link">
+                      Predictions</a>
+                </li>
+                <li class="nav-item" id="nav-li">
+                  <a href="https://github.com/joshtype?tab=repositories" 
+                    class="nav-link" id="gh-link">bF(bD) Repo</a>
+                </li>
+              </ul>
+            </div>   <!-- close navbar list -->
+          </div>  <!-- close epanded navbar -->
+        </div>  <!-- close navbar container -->
+      </nav>  <!-- close navbar row -->
+
+      <!-- Page Title: 3rd row x 12 cols -->
+      <span class="row" id="page-title">
+        <p class="display-4 text-success">Visualizations</p>
+      </span>
+      
+      <!-- MAIN: 4th row x 12 cols -->
+      <main class="row">
+        <div class="container-fluid" id="main-left">
+          
+          <!-- Javascript Charts -->
+          <p class="display-6 text-success" id="section-title">
+            Javascript Charts
+          </p>
+          <p id="js-chart-intro">
+            Below are three charts created using Javascript + Fetch API + Chart.js.
+            Visit the <a href src="page2.html">Walkthrough</a> page for more 
+            detailed info on how data was prepared.
+          </p>
+
+          <!-- JS CHART #1 -->
+          <div class="border" id="js-chart1-container">
+            <legend class="text-success" id="subtitle">
+              Pie Chart: Proportion of Sightings per Class A, B, and C 
+            </legend>
+            <canvas id="js-chart1-canvas">
+              <!-- chart.js #1 goes here -->
+            </canvas>
+            <p id="js-chart1-info">
+              The above chart is a pie chart depicting classifcation grade
+              data points as pie wedges.<br>
+              From this, it can be observed that almost every sighting is 
+              graded as Class A or Class B. An extremely slim portion of 
+              sightings are graded as Class C. One might infer from this
+              that evidence of class C sightings aren't easily distinguished
+              from evidence produced by non-bigfoot fauna.
+            </p>
+          </div><br><br>
+          
+          <!-- JS CHART #2 -->
+          <div class="border mb-3" id="js-chart2-container">
+            <legend class="text-success" id="subtitle">
+              Vertical Histogram: Sightings Per Month
+            </legend>
+            <canvas id="js-chart2-canvas">
+              <!-- js chart #2 goes here -->
+            </canvas>
+            <p id="js-chart-info">
+              The above chart is a vertical histogram showing the number
+              of sightings recorded for each month of the year.<br>
+            </p>
+          </div><br><br>
+
+          <!-- JS CHART #3 -->
+          <div class="border" id="js-chart3-container">
+            <legend class="text-success" id="subtitle">
+              Horizontal Histogram:
+            </legend>
+            <canvas id="js-chart3-canvas">
+              <!-- js chart #3 goes here -->
+            </canvas>
+            <p id="js-chart-info">
+              The above chart is a...<br>
+            </p>
+          </div><br>
+        </div>  <!-- close left-main col -->
+
+        <!-- PYTHON CHARTS -->
+        <legend class="text-success">Python Charts</legend>
+        <p id="py-chart-info">
+          Here are the charts made from the same data as the Javascript charts 
+          but using Matplotlib.pyplot methods.
+        </p>
+
+        <!-- python chart #1 -->
+        <div class="border" id="py-chart1-container">
+          Pie Chart of Classification Grades:<br>
+          (click to view enlarged in new tab)<br>
+          <img src="imgs/py-charts/pie_classGrades.png"
+            alt="Histogram of classification grades per sighting" 
+            width="50%" height="50%" id="py-chart1" />
+          <br><br>
+          Python code:<br>
+          <code id="py-chart1-code">
+            wdg_labels = ["Class A \n (1,895 Sightings)",<br>
+            &ensp;&ensp;&ensp;&ensp;"Class B \n (1,896 Sightings)",<br>
+            &ensp;&ensp;&ensp;&ensp;"Class C \n (19 Sightings)"]<br>
+            wdg_colors = ["blue", "yellow", "red"]<br>
+            plt.pie(num_ea_grade, labels=wdg_labels, startangle=90,<br>
+            &ensp;&ensp;&ensp;&ensp;colors=wdg_colors, shadow=True)<br>
+            plt.title("Proportions of Classification Grades")<br>
+            plt.show()
+          </code>
+        </div>
+        
+        <!-- python chart #2 -->
+        <div class="border" id="py-chart2-container">
+          Vertical Histogram of Sightings Per Month of Year:<br>
+          (click to view enlarged in new tab)<br>
+          <img src="imgs/py-charts/histo_monthPerSightings.png"
+            alt="Histogram of sightings per reported months"
+            width="50%" height="50%" id="py-chart2" />
+          <br><br>            
+          Python code:<br>
+          <code id="py-chart2-code">
+            plt.hist(grade)<br>
+            plt.ylabel("Number of Sightings")<br>
+            plt.xlabel("Classification of Each Sighting")<br>
+            plt.yticks(range(0,1950,75))<br>
+            plt.figure(figsize=(8,8))<br>
+            plt.show()<br>
+          </code>
+        </div>
+
+        <!-- python chart #3 -->
+        <div class="border" id="py-chart3-container">
+          Horizontal Histogram of Sightings Per Day of Month:<br>
+          (click to view enlarged in new tab)<br>
+          <img src="imgs/py-charts/histo_dayPerSightings.png"
+            alt="Histogram of sightings per reported days"
+            width="50%" height="50%" id="py-chart3" />
+          <br><br>
+          Python code:<br>
+          <code id="py-chart3-code">
+            plt.hist(mm)<br>
+            plt.xlabel("Month")<br>
+            plt.ylabel("Number of Sightings")<br>
+            plt.show()<br>
+          </code><br><br>
+        </div>  <!-- close python chart -->
+          
+      </div>  <!-- close main col -->
+    </main>  <!-- close main row -->
+
+      <!-- FOOTER: bottom row x 12 cols -->
+      <div class="row">
+        <footer class="container-fluid rounded bg-info">
+          <center>
+            <p id="contact-info">
+              studentDesigns, LLC &nbsp;
+              <a href="tel: +15555555555" class="contact-link"
+                id="phone-link">
+                <img src="imgs/icons/phone-icon.png" id="phone-icon"
+                  class="contact-icon" /></a> &nbsp;
+              
+              <a href="mailto: gregory_joshua2@students.columbusstate.edu"
+                class="contact-link" id="mail-link">
+                <img src="imgs/icons/mail-icon1.png" id="mail-icon"
+                  class="contact-icon" /></a><br>
+              1 Bigfoot Way; Forest Cave, NA; 10101
+            </p>
+            
+            <p id="datetime">
+              Last Modified:
+              <span id="update-date"></span>
+            </p>
+            <p id="copyright-info">
+              <small>
+                &copy;2023 Joshua Gregory. All images made using
+                <a href="https://starryai.com">StarryAI.com</a>.
+              </small>
+            </p>
+          </center>
+        </footer>  <!-- close footer col -->
+      </div>     <!-- close footer row -->
+    </div>     <!-- close grid -->
+
+    
+    <!-- Chart.js JS -->
+    <script src="script-p3-charts.js"></script>
+    <!-- Sitewide Datetime & Logo Click JS -->
+    <script src="script-site-dateLogo.js"></script>
+  </body>
+</html>

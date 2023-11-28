@@ -10,69 +10,112 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>bigFoot bigData</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Bootstrap CDNs & Local CSS -->
+    <link rel="stylesheet" href=
+      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src=
+      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <link rel="stylesheet" href="style.css"  type="text/css" />
+
+    <!-- page title and favicon -->
+    <title>bigFoot(home)</title>
+    <link rel="icon" type="image/x-icon" href="imgs/icons/bigfoot-icon.png">
   </head>
 
   <body>
-    <!-- grid wrapper -->
-    <div class="container" id="p1-container">
+    <!-- grid container -->
+    <div class="container-fluid" id="page-grid">
 
-      <!-- TOP-RIGHT: 1 row x 2 cols -->
-      <header class="head" id="p1-head">
-        <!-- banner goes here -->
+      <!-- HEADER: top row x 12 cols -->
+      <header class="row">
+        <div class="container-fluid rounded bg-primary text-white" 
+          id="header-row">
+          <p class="display-1">bigFoot(bigData)</p>
+          <p class="display-4">Javascript + Data Science + Bigfoot</p>
+        </div>
       </header>
 
-      <!-- MID-LEFT: 1 row x 1 col -->
-      <nav class="nav" id="p1-nav">
-        <center>
-          <!-- circle logo -->
-          <div class="nav-row" id="nav-logo"></div>
-          <a href="index.html" id="nav-link">Home Page</a><br>
-          <br><a href="page2.html" id="nav-link">Walkthrough</a><br>
-          <br><a href="page3.html" id="nav-link">Visualization</a><br>
-          <br><a href="page4.html" id="nav-link">Prediction</a><br>
-          <br><a href="https://github.com/joshtype/bigFeet_bigData.git"
-            id="nav-link">GitHub Repo</a><br>
-          <br><a href="https://www.kaggle.com/datasets/chemcnabb/bfro-bigfoot-
-                sighting-report/" id="nav-link">Kaggle</a><br><br>
-        </center>
-      </nav>
-
-      <!-- SMALLER SCREEN NAVBAR MID: 1 row x all cols -->
-      <span class="sm-nav" id="p1-sm-nav">
-        <select onChange="window.location.href=this.value"
-          class="drop-nav" id="sm-drop-nav">
-          <option value="" class="drop-link">Select a Page</option>
-          <option value="./index.html" class="drop-link">Home Page</option>
-          <option value="./page2.html" class="drop-link">Walkthrough</option>
-          <option value="./page3.html" class="drop-link">Visualization</option>
-          <option value="./page4.html" class="drop-link">Prediction</option>
-          <option value="https://github.com/joshtype/bigFeet_bigData.git"
-            class="drop-link">GitHub Repo</option>
-          <option value="https://www.kaggle.com/datasets/chemcnabb/bfro-bigfoot-
-            sighting-report/" class="drop-link">Kaggle</option>
-        </select>
-      </span>
-
-      <!-- MID-MID: 1 row x 1 col -->
-        <!-- MID-MID: 1 row x 1 col -->
-        <main class="main" id="p2-main">
-          <span class="page-title" id="p1-page-title">
-             Welcome!
-          </span>
+      <!-- NAVBAR: 2nd row x 12 cols, collapses on screens <= 576px -->
+      <nav class="row">
+        <div class="navbar navbar-expand-sm bg-light navbar-light rounded"
+          id="nav-row">
           
-          <p id="idx-purpose">
-            This project site focuses on how Javascript and Python, 
-            with relevant libraries, can be utilized to gain "valuable" 
-            insight from a dataset comprised of thousands of bigfoot 
-            sightings.
+          <div class="container-fluid" id="nav-container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#collapsibleNavbar" id="nav-dropdown">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav nav-tabs" id="nav-ul">
+
+                <!-- navbar brand img -->
+                <li class="nav-item" id="nav-li">
+                  <a class="navbar-brand" href="#" id="logo-link"
+                    onclick="logoClick()">
+                    <img src="imgs/logo-sm.png" alt="bigfoot logo" 
+                      id="logo-img" /></a>
+                </li>
+                <!-- navigation links -->
+                <li class="nav-item" id="nav-li">
+                  <a href="p1-home.html" class="nav-link active" id="home-link">
+                    Home Page</a>
+                </li>
+                <li class="nav-item" id="nav-li">
+                  <a href="p2-Walkthru.html" class="nav-link" id="p2-link">
+                    Walkthrough</a>
+                </li>
+                <li class="nav-item" id="nav-li">
+                  <a href="p3-Charts.html" class="nav-link" id="p3-link">
+                    Visualizations</a>
+                </li>
+                <li class="nav-item" id="nav-li">
+                    <a href="p4-Predict.html" class="nav-link" id="p4-link">
+                      Predictions</a>
+                </li>
+                <li class="nav-item" id="nav-li">
+                  <a href="https://github.com/joshtype?tab=repositories" 
+                    class="nav-link" id="gh-link">bF(bD) Repo</a>
+                </li>
+              </ul>
+            </div>   <!-- close navbar list -->
+          </div>  <!-- close epanded navbar -->
+        </div>  <!-- close navbar container -->
+      </nav>  <!-- close navbar row -->
+
+      <!-- Page Title: 3rd row x 12 cols -->
+      <span class="row" id="page-title">
+        <p class="display-4 text-success">Welcome to bF(bD)!</p>
+      </span>
+      
+      <!-- MAIN: 4th row x 12 cols -->
+      <main class="row">
+        <div class="container-fluid" id="main-content">
+          <!-- About Site -->
+          <legend class="text-success" id="subtitle">
+            What is bF(bD)?
+          </legend>
+          <p id="section-info">
+            This project focuses on how Javascript and Python can be utilized for 
+            dynamic client-side data analysis, visualization, and machine learning 
+            prediction. Using a tongue-in-cheek dataset (source: <a href=
+            "https://www.kaggle.com/datasets/chemcnabb/bfro-bigfoot-sighting-report/" 
+            class="text-link" id="kag-link">Kaggle.com</a>), the purpose of this site 
+            is to demonstrate that Javascript is not merely a valid option for data 
+            science. Combining Python's  ability to read, clean, and write data, with 
+            Javascript's DOM manipulation and ease of publishing to the web, has the 
+            potential to transform data science from its normally unseen back-end role 
+            into a transparent and interactive engagement between client and server.
             <br><br>
-            Please visit the <a href="page2.html">Walkthrough page</a>
+            
+            Please visit the <a href="page2.html" class="text-link">Walkthrough page</a>
             for detailed information regarding the libraries and methods
             I employed to accomplish my goals. Included are screenshots, code 
             excerpts, and files for download.
             <br><br>
+            
             Please visit the <a href="page3.html">Visualizations page</a>
             to view a variety of charts that were created using the 
             Javascript library Chart.js from data read and cleaned in
@@ -80,131 +123,131 @@
             appropriately can help users interpret data and develop inferences that 
             may not have been possible from raw textual data.
             <br><br>
-            Please visit the <a href="page4.html">Prediction page</a> 
+            
+            Please visit the <a href="page4.html">Predictions page</a> 
             to view machine learning predictions for certain data
             created using Tensorflow's complex neural networks. Such 
             tools are now accessible for client-side programming via
             CDN and Tensorflow's Javascript library, Tensorflow.js.
             <br><br>
+            
             Last but not least: to stay updated regarding future projects, please 
-            fill out the form below. Thanks!
+            fill out the form. Thanks!
           </p>
 
-          <span class="page-subtitle" id="p1-page-subtitle">
-            Registration Form
-          </span>
-          <br>
-          <span id="p1-form-rules">
-            (Required fields are denoted by an asterisk.)
-          </span>
-          
-        <!-- call js function to validate age (18+), email, and zipcode -->
-        <form action="https://webdevbasics.net/scripts/yoga.php" 
-          id="idx-form" name="idx-form" target="_blank" method="post"
-            onsubmit="return validateForm()"> 
-          <ul class="form-ul">
+          <!-- Web Form -->
+          <div id="form-container">
+            <legend class="text-success" id="subtitle">
+              Registration (*Required)</legend>
             
-            <li class="form-li">
-              <fieldset class="basic-info">
-                <legend>Basic Info</legend>
-                <label for="fname">First Name</label><br>
-                <input type="text" id="fname" name="fname" minlength="1"
-                  placeholder="Elijah" />
-                <br><br>
-                <label for="lname">Last Name</label><br>
-                <input type="text" id="lname" name="lname" minlength="1"
-                  placeholder="Bailey" />
-                <br><br>
-                <!-- validate age >= 18 -->
-                <label for="bday">Birthday*</label><br>
-                <input type="date" id="bday" name="bday" 
-                  onclick="clearError()"/>
-                <small>
-                  <p id="bday-err"><!-- err msg --></p>
-                </small>                
-              </fieldset>
-            </li>
-            
-            <li class="form-li">
-              <fieldset id="contact-info">
-                <legend>Contact Info:</legend>
-                <label for="email">Email*</label><br>
-                <input type="email" id="email" name="email"
-                  placeholder="EBailey@foundation.com" required />
-                <br><br>
-                <label for="states">State of Residence*</label><br>
-                <select name="states" id="states" required>
-                  <option value="al">Alabama</option>
-                  <option value="fl">Florida</option>
-                  <option value="ga">Georgia</option>
-                </select>
-                <br><br>
-                <!-- validate zip code is real -->
-                <label for="zip">Zip Code*</label><br>
-                <input type="number" id="zip" name="zip"
-                  placeholder="12345" required 
-                  onclick="clearError()"/>
-                <small>
-                  <p id="zip-err"><!-- err msg --></p>
-                </small>
-                <label for="phone">Phone Number</label><br>
-                <input type="tel" id="phone" name="phone"  
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                  placeholder="123-456-7890" />
-              </fieldset>
-            </li>
-            
-            <li class="form-li">
-              <fieldset id="submit-reset">
-                <input type="submit" name="submit" id="submit" 
-                  value="Submit" />
-                <input type="reset" name="reset" id="reset" 
-                  value="Reset" />
-                <br>
-              </fieldset>
-            </li>
-          </ul>    
-      </main>
+            <form action="https://webdevbasics.net/scripts/yoga.php" 
+              id="idx-form" name="idx-form" target="_blank" method="post"
+              class="m-5" onsubmit="return validateForm()"> 
 
-      <!-- BOTTOM-ALL: 1 row x all cols -->
-      <footer class="foot" id="p2-foot">
-        <center>
-          <p id="contact-info">
-            studentDesigns LLC:<br>
-            1 Bigfoot Way; Forest Cave, NA; 10101<br><br>
-            <button class="contact-btn" id="mail-btn">
+              <!-- FIRST NAME -->
+              <label for="fname" class="form-label">
+                First Name</label><br>
+              <input type="text" class="form-control" id="fname" 
+                name="fname" minlength="1" placeholder="Elijah" /><br>
+              
+              <!-- LAST NAME -->
+              <label for="lname" class="form-label">
+                Last Name</label><br>
+              <input type="text" class="form-control" id="lname" 
+                name="lname" minlength="1" placeholder="Bailey" /><br>
+                  
+              <!-- BDAY: VALIDATE AGE >= 18 YRS -->
+              <label for="bday" class="form-label">
+                Birthday*</label><br>
+              <input type="date" class="form-control" id="bday-input" 
+                name="bday" onclick="clearError()" required />
+              <small>
+                <p id="bday-err"><!-- ERROR MSG --></p>
+              </small><br>        
+
+              <!-- EMAIL -->
+              <label for="email" class="form-label">
+                Email*</label><br>
+              <div class="input-group">
+                <input type="email" class="form-control" id="email" 
+                  name="email" placeholder="Your email"
+                  required />
+                <span class="input-group-text" id="help-text">@bigfoot.com</span>
+              </div><br>
+
+              <!-- STATE OF RESIDENCE: AL/FL/GA -->
+              <label for="states">State of Residence*</label><br>
+              <select name="states" class="form-select" 
+                id="states" required>
+                <option>Select a State</option>
+                <option value="al">Alabama</option>
+                <option value="fl">Florida</option>
+                <option value="ga">Georgia</option>
+              </select><br>
+                
+              <!-- ZIP: VALIDATE FALLS WITHIN RANGE -->
+              <label for="zip" class="form-label">
+                Zip Code*</label><br>
+              <input type="number" class="form-control" id="zip" 
+                name="zip" placeholder="12345" onclick="clearError()"
+                required />
+              <small>
+                <p id="zip-err"><!-- ERROR MSG --></p>
+              </small>
+
+              <!-- PHONE NUMBER -->
+              <label for="phone" class="form-label">Phone Number</label><br>
+              <input type="tel" class="form-control" id="phone" 
+                name="phone" placeholder="123-456-7890" 
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+              <br>
+
+              <button type="submit" class="btn btn-success" id="submit"
+                name="submit">Submit</button>
+              <button type="reset" class="btn btn-success" id="reset"
+                name="reset">Reset</button><br><br>
+            </form>  <!-- close web form -->
+          </div>  <!-- close form container -->
+        </div>  <!-- close main content -->
+      </main>  <!-- close main row -->
+
+      <!-- FOOTER: bottom row x 12 cols -->
+      <div class="row">
+        <footer class="container-fluid rounded bg-info">
+          <center>
+            <p id="contact-info">
+              studentDesigns, LLC &nbsp;
+              <a href="tel: +15555555555" class="contact-link"
+                id="phone-link">
+                <img src="imgs/icons/phone-icon.png" id="phone-icon"
+                  class="contact-icon" /></a> &nbsp;
+              
               <a href="mailto: gregory_joshua2@students.columbusstate.edu"
-                class="contact-link">
-                <img src="img/icons/mail-icon1.png" id="mail-ico"
-                  class="contact-ico" width="50%"></a>
-            </button>
-            <button class="contact-btn" id="phone-btn">
-              <a href="tel: +15555555555" class="contact-link">
-                <!-- phone icons -->
-                <img src="img/icons/ph-ico-blk.png" id="ph-ico-blk"
-                  class="contact-ico" width="50%"></a>
-            </button>
-          </p>
-          <p id="datetime">
-            Last Modified:
-            <span id="update-date"></span>
-          </p>
-          <p id="copyright-info">
-            &copy;2023 Joshua Gregory. All images made using
-            <a href="https://starryai.com">StarryAI.com</a>.
-          </p>
-        </center>
-      </footer>
-      
-    </div> <!-- close grid -->
+                class="contact-link" id="mail-link">
+                <img src="imgs/icons/mail-icon1.png" id="mail-icon"
+                  class="contact-icon" /></a><br>
+              1 Bigfoot Way; Forest Cave, NA; 10101
+            </p>
+            
+            <p id="datetime">
+              Last Modified:
+              <span id="update-date"></span>
+            </p>
+            <p id="copyright-info">
+              <small>
+                &copy;2023 Joshua Gregory. All images made using
+                <a href="https://starryai.com">StarryAI.com</a>.
+              </small>
+            </p>
+          </center>
+        </footer>  <!-- close footer -->
+      </div>     <!-- close row -->
+    </div>     <!-- close grid -->
 
-    <!-- index.html web form js -->
+    
+    <!-- Index Webform JS -->
     <script src="script-idx-form.js"></script>
-    <!-- dynamic datetime js -->
-    <script src="script-all-date.js"></script>
-    <!-- Replit js -->
-    <script src="https://replit.com/public/js/replit-
-      badgev2.js" theme="dark" position="bottom-right">       
-    </script>
+    <!-- Sitewide Datetime & Logo Click JS -->
+    <script src="script-site-dateLogo.js"></script>
   </body>
 </html>
