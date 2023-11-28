@@ -9,6 +9,7 @@ const slide1 = document.getElementById("slide1");
 const slide2 = document.getElementById("slide2");
 const slide3 = document.getElementById("slide3");
 const slide4 = document.getElementById("slide4");
+const slide5 = document.getElementById("slide5");
 
 // add an event listener to each slide
 slide1.addEventListener("click", function() {
@@ -23,5 +24,8 @@ slide3.addEventListener("click", function() {
 });
 slide4.addEventListener("click", function() {
   window.open(slide4.src, "_blank");
+});
+slide5.addEventListener("click", function() {
+  window.open(slide5.src, "_blank");
 });
 
