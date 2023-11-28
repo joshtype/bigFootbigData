@@ -1,0 +1,12 @@
+0       Class A
+1       Class A
+2       Class A
+3       Class A
+4       Class A
+         ...   
+3805    Class C
+3806    Class C
+3807    Class C
+3808    Class C
+3809    Class C
+Name: classification, Length: 3810, dtype: object

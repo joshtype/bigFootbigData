@@ -10,18 +10,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <title>bigFoot(tensor)</title>
 
-    <!-- Local CSS and Bootstrap CDNs -->
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" type="text/css" href=
-      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Bootstrap CSS CDN -->
+    <link href=
+      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+    <!-- Bootstrap JS CDN -->
     <script src=
       "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
     </script>
-
-    <!-- page title and favicon -->
-    <title>bigIndex</title>
-    <link rel="icon" type="image/x-icon" href="imgs/icons/bigfoot-icon.png">
+    <!-- Tensorflow.js CDN -->
+    <script src=
+      "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js">
+    </script>
+    <!-- Local CSS -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
@@ -55,8 +59,8 @@
                 <li class="nav-item" id="nav-li">
                   <a class="navbar-brand" href="#" id="logo-link"
                     onclick="logoClick()">
-                    <img src="imgs/logo-16.png" id="logo-img" 
-                      alt="logo with bigfoot's silhouette" /></a>
+                  <img src="imgs/logo-16.png" id="logo-img" 
+                    alt="logo with bigfoot's silhouette" /></a>
                 </li>
                 <!-- navigation links -->
                 <li class="nav-item" id="nav-li">
@@ -87,129 +91,52 @@
 
       <!-- Page Title: 3rd row x 12 cols -->
       <span class="row" id="page-title">
-        <p class="display-4 text-success">Welcome to bF(bD)!</p>
+        <p class="display-4 text-success">Tensorflow.js Predictions</p>
       </span>
       
       <!-- MAIN: 4th row x 12 cols -->
       <main class="row">
         <div class="container-fluid" id="main-content">
-          <!-- About Site -->
+          Here we will see if the Tensorflow linear regression prediction 
+          matches the inferences made through visualizations. According to
+          the visualizations, our best shot at sighting a bigfoot will occur
+          in the middle days of June and will be a Class A or B sighting.
+          
+          <!-- PREDICTION #1 -->
           <legend class="text-success" id="subtitle">
-            What is bF(bD)?
+            Prediction #1
           </legend>
-          <p id="section-info">
-            This project focuses on how Javascript and Python can be utilized for 
-            dynamic client-side data analysis, visualization, and machine learning 
-            prediction. Using a tongue-in-cheek dataset (source: <a href=
-            "https://www.kaggle.com/datasets/chemcnabb/bfro-bigfoot-sighting-report/" 
-            class="text-link" id="kag-link">Kaggle.com</a>), the purpose of this site 
-            is to demonstrate that Javascript is not merely a valid option for data 
-            science. Combining Python's  ability to read, clean, and write data, with 
-            Javascript's DOM manipulation and ease of publishing to the web, has the 
-            potential to transform data science from its normally unseen back-end role 
-            into a transparent and interactive engagement between client and server.
-            <br><br>
-            
-            Please visit the <a href="page2.html" class="text-link">Walkthrough page</a>
-            for detailed information regarding the libraries and methods
-            I employed to accomplish my goals. Included are screenshots, code 
-            excerpts, and files for download.
-            <br><br>
-            
-            Please visit the <a href="page3.html">Visualizations page</a>
-            to view a variety of charts that were created using the 
-            Javascript library Chart.js from data read and cleaned in
-            Python. They will highlight how visually representating data 
-            appropriately can help users interpret data and develop inferences that 
-            may not have been possible from raw textual data.
-            <br><br>
-            
-            Please visit the <a href="page4.html">Predictions page</a> 
-            to view machine learning predictions for certain data
-            created using Tensorflow's complex neural networks. Such 
-            tools are now accessible for client-side programming via
-            CDN and Tensorflow's Javascript library, Tensorflow.js.
-            <br><br>
-            
-            Last but not least: to stay updated regarding future projects, please 
-            fill out the form. Thanks!
+          <p id="pred1-info">
+            Info about prediction #1
+          </p>
+          <p id="pred1">
+            <!-- prediction #1 goes here -->
           </p>
 
-          <!-- Web Form -->
-          <div id="form-container">
-            <legend class="text-success" id="subtitle">
-              Registration (*Required)</legend>
-            
-            <form action="https://webdevbasics.net/scripts/yoga.php" 
-              id="idx-form" name="idx-form" target="_blank" method="post"
-              class="m-5" onsubmit="return validateForm()"> 
+          <!-- PREDICTION #2 -->
+          <legend class="text-success" id="subtitle">
+            Prediction #2
+          </legend>
+          <p id="pred2-info">
+            Info about prediction #2
+          </p>
+          <p id="pred2">
+            <!-- prediction #2 goes here -->
+          </p>
 
-              <!-- FIRST NAME -->
-              <label for="fname" class="form-label">
-                First Name</label><br>
-              <input type="text" class="form-control" id="fname" 
-                name="fname" minlength="1" placeholder="Elijah" /><br>
-              
-              <!-- LAST NAME -->
-              <label for="lname" class="form-label">
-                Last Name</label><br>
-              <input type="text" class="form-control" id="lname" 
-                name="lname" minlength="1" placeholder="Bailey" /><br>
-                  
-              <!-- BDAY: VALIDATE AGE >= 18 YRS -->
-              <label for="bday" class="form-label">
-                Birthday*</label><br>
-              <input type="date" class="form-control" id="bday-input" 
-                name="bday" onclick="clearError()" required />
-              <small>
-                <p id="bday-err"><!-- ERROR MSG --></p>
-              </small><br>        
-
-              <!-- EMAIL -->
-              <label for="email" class="form-label">
-                Email*</label><br>
-              <div class="input-group">
-                <input type="email" class="form-control" id="email" 
-                  name="email" placeholder="Your email"
-                  required />
-                <span class="input-group-text" id="help-text">@bigfoot.com</span>
-              </div><br>
-
-              <!-- STATE OF RESIDENCE: AL/FL/GA -->
-              <label for="states">State of Residence*</label><br>
-              <select name="states" class="form-select" 
-                id="states" required>
-                <option>Select a State</option>
-                <option value="al">Alabama</option>
-                <option value="fl">Florida</option>
-                <option value="ga">Georgia</option>
-              </select><br>
-                
-              <!-- ZIP: VALIDATE FALLS WITHIN RANGE -->
-              <label for="zip" class="form-label">
-                Zip Code*</label><br>
-              <input type="number" class="form-control" id="zip" 
-                name="zip" placeholder="12345" onclick="clearError()"
-                required />
-              <small>
-                <p id="zip-err"><!-- ERROR MSG --></p>
-              </small>
-
-              <!-- PHONE NUMBER -->
-              <label for="phone" class="form-label">Phone Number</label><br>
-              <input type="tel" class="form-control" id="phone" 
-                name="phone" placeholder="123-456-7890" 
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
-              <br>
-
-              <button type="submit" class="btn btn-success" id="submit"
-                name="submit">Submit</button>
-              <button type="reset" class="btn btn-success" id="reset"
-                name="reset">Reset</button><br><br>
-            </form>  <!-- close web form -->
-          </div>  <!-- close form container -->
-        </div>  <!-- close main content -->
-      </main>  <!-- close main row -->
+          <!-- PREDICTION #3 -->
+          <legend class="text-success" id="subtitle">
+            Prediction #3
+          </legend>
+          <p id="section-info">
+            Info about prediction #3
+          </p>
+          <p id="pred3">
+            <!-- prediction #3 goes here -->
+          </p>
+          
+      </div>  <!-- close main col -->
+    </main>  <!-- close main row -->
 
       <!-- FOOTER: bottom row x 12 cols -->
       <footer class="row text-white">
