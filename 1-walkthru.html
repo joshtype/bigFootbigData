@@ -1,0 +1,379 @@
+<!--
+  Joshua Gregory
+  Professor Montgomery
+  Internet Programming
+  Final Project HTML
+-->
+<!-- Greeting & Registration Web Form Page -->
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>bigFoot(home)</title>
+
+    <!-- Local CSS and Bootstrap CDNs -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href=
+      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src=
+      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- page title and favicon -->
+    <title>bigIndex</title>
+    <link rel="icon" type="image/x-icon" href="imgs/icons/bigfoot-icon.png">
+  </head>
+
+  <body>
+    <!-- grid container -->
+    <div class="container-fluid" id="page-grid">
+
+      <!-- HEADER: top row x 12 cols -->
+      <header class="row">
+        <div class="row container-fluid rounded bg-primary text-white" id="header-row">
+          <p class="display-1">bigFoot(bigData)</p>
+          <p class="display-4">Javascript + Data Science + Bigfoot</p>
+        </div>
+      </header>
+
+      <!-- NAVBAR: 2nd row x 12 cols, collapses on screens <= 576px -->
+      <nav class="row">
+        <div class="navbar navbar-expand-sm bg-light navbar-light rounded" 
+          id="nav-row">
+          <div class="container-fluid" id="nav-container">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#collapsibleNavbar" id="nav-dropdown">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav nav-tabs" id="nav-ul">
+
+              <!-- navbar items -->
+              <li class="nav-item" id="nav-li">
+                <a class="navbar-brand" href="#" id="logo-link" 
+                  onclick="logoClick()">
+                  <!-- brand logo -->
+                <img src="imgs/logo-16.png" id="logo-img" 
+                  alt="logo with bigfoot's silhouette" /></a>
+              </li>
+              <!-- navbar links -->
+              <li class="nav-item" id="nav-li">
+                <a href="index.html" class="nav-link active" id="home-link">
+                  Home Page</a>
+              </li>
+              <li class="nav-item" id="nav-li">
+                <a href="1-walkthru.html" class="nav-link" id="p2-link">
+                  Walkthrough</a>
+              </li>
+              <li class="nav-item" id="nav-li">
+                <a href="2-visualize.html" class="nav-link" id="p3-link">
+                  Visualizations</a>
+              </li>
+              <li class="nav-item" id="nav-li">
+                  <a href="3-predict.html" class="nav-link" id="p4-link">
+                    Predictions</a>
+              </li>
+              <li class="nav-item" id="nav-li">
+                <a href="https://github.com/joshtype?tab=repositories" 
+                  class="nav-link" id="gh-link">bF(bD) Repo</a>
+              </li>
+              <li class="nav-item" id="nav-li">
+                <a href="https://www.kaggle.com/datasets/chemcnabb/bfro-bigfoot-
+                  sighting-report/" class="nav-link" id="kag-link">
+                  Kaggle</a>
+              </li>
+            </ul>
+          </div> <!-- close navbar list -->
+        </div> <!-- close epanded navbar -->
+      </div> <!-- close navbar container -->
+    </nav> <!-- close navbar row -->
+
+    <!-- PAGE TITLE: 3rd row x 12 cols -->
+    <span class="row" id="page-title">
+      <p class="display-4 text-success">Walkthrough</p>
+    </span>
+
+    <!-- SLIDESHOW SECTION: 4th row x 12 cols -->
+    <section class="row mb-3">
+      <p class="display-6 text-success" id="subtitle">
+        Slideshow
+      </p>
+      <p id="slideshow-info">
+        A few screenshots from various stages of the project.
+        Click arrows to navigate between slides.
+        Click the image the view it in a new tab.
+      </p>
+      <!-- Slideshow -->
+      <div class="carousel slide" id="slide" data-ride="carousel">
+        <!-- slide container -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imgs/slides/slide1.png" class="d-block w-100" 
+              id="slide1" alt="Python used to clean data">
+          </div>
+          <div class="carousel-item">
+            <img src="imgs/slides/slide2.png" class="d-block w-100" 
+              id="slide2" alt="Python used to write data to files">
+          </div>
+          <div class="carousel-item">
+            <img src="imgs/slides/slide3.png" class="d-block w-100" 
+              id="slide3" alt="Downloading files to project root">
+          </div>
+          <div class="carousel-item">
+            <img src="imgs/slides/slide4.png" class="d-block w-100" 
+              id="slide4" alt="Tensorflow.js javascript function">
+          </div>
+        </div>
+        <!-- next and prev controls -->
+        <button class="carousel-control-prev" type="button" 
+          data-bs-target="#slide" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" 
+          data-bs-target="#slide" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- MAIN: 5th row x 12 cols -->
+    <main class="row" id="main-row">
+      <div class="container-fluid" id="main-content">
+        <!-- Python Steps -->
+        <p class="display-6 text-success" id="section-title">
+          Python Steps
+        </p>
+        <p id="section-description">
+          The most important thing when working with data in csv
+          (comma-seperated-values) is ensuring the data is clean
+          and relevant. I used Python with Pandas and Matplotlib
+          in Google Colab to read, clean, and visualize the data.
+        </p><br><br>
+
+        <legend class="text-success" id="page-subtitle">
+          My Python code:
+        </legend>
+        <iframe src="dataset/data_cleaner_py.txt" id="python_code" 
+          title="Python code"></iframe><br><br>
+
+        <p id="python-info">
+          I used the above code to read the raw csv file and load it
+          to a Pandas <code>DataFrame</code> object. Several steps were
+          then taken to clean the data. I removed the first column entirely
+          as it contained long strings that summarized each sighting and
+          provided no quantitative or qualitative value.
+          <br><br>
+          Next, I cleaned the data in the datetime column. This
+          column was important as it provided the day, month,
+          and year of each sighting. However, the times for each
+          for sightings had been recorded as 'T12:00:00Z'. So I
+          used <code>str.slice()</code> to extract the values I
+          needed (days, months, years), created new columns to
+          store these, and then deleted the original datetime
+          column. As a note: each iteration of the DataFrame is
+          stored in a new variable. This allows major changes to
+          be easily reset, as opposed to working with only one
+          copy of the data.
+          <br><br>
+          A significant portion of the latter half of the Python is
+          dedicated to exporting the resulting data to .csv files.
+
+          I called <code>file.open(path/filename, w+)</code>. The
+          <code>w+</code> flag instructs the method to overwrite the
+          file if it exists or create a new file with the provided
+          name if it doesn't exist. I then used a for-loop to iterate
+          through the summarized data, stored as arrays, writing the
+          data values to the files in the body of the loop. After downloading
+          each file to my local machine, I uploaded them to my project
+          directory.
+        </p><br>
+
+        <legend class="text-success" id="subtitle">
+          The Resulting CSVs
+        </legend>
+
+        <ol id="file-info">
+          <small>To download, visit the
+            <a href="https://github.com/joshtype/bigFeet_bigData.git">
+              GitHub Repo</a>to view these and all other project files.
+            <br>Or, right-click + 'Save target as' the below links.<br>
+            Download the original dataset from
+            <a href="https://www.kaggle.com/datasets/chemcnabb/bfro-
+              bigfoot-sighting-report/">Kaggle</a> to compare values.
+          </small>
+          <br><br>
+
+          <li class="file-li">
+            <a href="dataset/bigfoot-sightings.csv" id="file-link">
+              bigfoot-sightings.csv</a>
+            <ul class="sub-ul">
+              <li class="sub-li">
+                The raw, uncleaned dataframe.
+              </li>
+            </ul>
+          </li>
+
+          <li class="file-li">
+            <a href="dataset/data_len.csv" id="file-link">
+              data_len.csv</a>
+            <ul class="sub-ul">
+              <li class="sub-li">
+                A single value representing the total length of the dataset.
+              </li>
+            </ul>
+          </li>
+
+          <li class="file-li">
+            <a href="dataset/day_data_uniques.csv" id="file-link">
+              day_data_uniques.csv</a>
+            <ul class="sub-ul">
+              <li class="sub-li">
+                Days on which sightings were recorded converted to a set.
+              </li>
+            </ul>
+          </li>
+
+          <li class="file-li">
+            <a href="dataset/day_data.csv" id="file-link">
+              day_data.csv</a>
+            <ul class="sub-ul">
+              <li class="sub-li">
+                Raw values for days on which sightings were recorded.
+              </li>
+            </ul>
+          </li>
+
+          <li class="file-li">
+            <a href="lat.csv" id="file-link">lat.csv</a>
+            <ul class="sub-ul">
+              <li class="sub-li">
+                Raw values for latitudes at which sightings were recorded.
+              </li>
+            </ul>
+          </li>
+
+          <li class="file-li">
+            <a href="lon.csv" id="file-link">lon.csv</a>
+            <ul class="sub-ul">
+              <li class="sub-li">
+                Raw values for longitudes at which sightings were recorded.
+              </li>
+            </ul>
+          </li>
+
+          <li class="file-li">
+            <a href="dataset/month_data_uniques.csv" id="file-link">
+              month_data_uniques.csv</a>
+            <ul class="sub-ul">
+              <li class="sub-li">
+                Months on which sightings were recorded converted to a set.
+              </li>
+            </ul>
+          </li>
+
+          <li class="file-li">
+            <a href="dataset/month_data.csv" id="file-link">
+              month_data.csv</a>
+            <ul class="sub-ul">
+              <li class="sub-li">
+                Raw values for months on which sightings were recorded.
+              </li>
+            </ul>
+          </li>
+
+          <li class="file-li">
+            <a href="datasetyear_data_uniques.csv" id="file-link">
+              year_data_uniques.csv
+            </a>
+            <ul class="sub-ul">
+              <li class="sub-li">
+                Years in which sightings were recorded converted to a set.
+              </li>
+            </ul>
+          </li>
+
+          <li class="file-li">
+            <a href="dataset/year_data.csv" id="file-link">
+              year_data.csv</a>
+            <ul class="sub-ul">
+              <li class="sub-li">
+                Raw values for years in which sightings were recorded.
+              </li>
+            </ul>
+          </li>
+        </ol>
+
+        <!-- Javascript Steps -->
+        <p class="display-6 text-success" id="section-title">
+          Javascript Steps
+        </p>
+        <p id="section-intro">
+          Once data has been prepared, presenting accurate visualizations is
+          critical to helping users understand the data and infer valuable
+          insights.
+        </p><br><br>
+
+        <legend class="text-success">Visualizing the Data:</legend>
+        <p id="visual-info">
+          I chose chart.js to visualize the data due to the easy to
+          understand syntax and functionality of the library.
+        </p>
+
+        <legend class="text-success">Training the ML Model:</legend>
+        <p id="pred-info">
+          I trained the Tensorflow.js neural network on the dates
+          on which sightings were reported and the latitude/longitude
+          at which they were located. The ML output a prediction
+          based on this data for the likeliest month of the year,
+          day of the month, and latitude/longitude location for
+          sighting a bigfoot.
+        </p><br><br>
+
+      </div> <!-- close main content -->
+    </main> <!-- close main row -->
+
+    <!-- FOOTER: bottom row x 12 cols -->
+    <div class="row">
+      <footer class="container-fluid rounded bg-info">
+        <center>
+          <p id="contact-info">
+            studentDesigns, LLC &nbsp;
+            <!-- phone icon link -->
+            <a href="tel: +15555555555" class="contact-link" id="phone-link">
+              <img src="imgs/icons/phone-icon.png" class="contact-icon" 
+                 id="phone-icon" /></a>&nbsp;
+            <!-- email icon link -->
+            <a href="mailto: gregory_joshua2@students.columbusstate.edu" 
+              class="contact-link" id="mail-link">
+              <img src="imgs/icons/mail-icon1.png" class="contact-icon" 
+                id="mail-icon" /></a><br>
+            1 Bigfoot Way; Forest Cave, NA; 10101
+          </p>
+          <!-- dynamic last modified datetime -->
+          <p id="datetime">
+            Last Modified:
+            <span id="update-date"></span>
+          </p>
+          <p id="copyright-info">
+            <small>
+              &copy;2023 Joshua Gregory. All images made using
+              <a href="https://starryai.com">StarryAI.com</a>.
+            </small>
+          </p>
+        </center>
+      </footer> <!-- close footer -->
+    </div> <!-- close row -->
+  </div> <!-- close grid -->
+
+
+  <!-- Slideshow full-sized img JS -->
+  <script src="script-p2-walkthru.js"></script>
+  <!-- Sitewide Datetime & Logo Click JS -->
+  <script src="script-site-dateLogo.js"></script>
+</body>
+
+</html>
