@@ -23,7 +23,7 @@
 
     <!-- page title and favicon -->
     <title>bigIndex</title>
-    <link rel="icon" type="image/x-icon" href="imgs/icons/bigfoot-icon.png">
+    <link rel="icon" type="image/x-icon" href="imgs/icons/logo-32.png">
   </head>
 
   <body>
@@ -62,11 +62,11 @@
               </li>
               <!-- navbar links -->
               <li class="nav-item" id="nav-li">
-                <a href="index.html" class="nav-link active" id="home-link">
+                <a href="index.html" class="nav-link" id="home-link">
                   Home Page</a>
               </li>
               <li class="nav-item" id="nav-li">
-                <a href="1-walkthru.html" class="nav-link" id="p2-link">
+                <a href="1-walkthru.html" class="nav-link active" id="p2-link">
                   Walkthrough</a>
               </li>
               <li class="nav-item" id="nav-li">
@@ -127,6 +127,10 @@
             <img src="imgs/slides/slide4.png" class="d-block w-100" 
               id="slide4" alt="Tensorflow.js javascript function">
           </div>
+          <div class="carousel-item">
+            <img src="imgs/slides/slide5.png" class="d-block w-100" 
+              id="slide5" alt="Python charts">
+          </div>
         </div>
         <!-- next and prev controls -->
         <button class="carousel-control-prev" type="button" 
@@ -138,7 +142,7 @@
           <span class="carousel-control-next-icon"></span>
         </button>
       </div>
-    </section><br><br>
+    </section>
 
     <!-- MAIN: 5th row x 12 cols -->
     <main class="row" id="main-row">
@@ -198,161 +202,160 @@
 
         <ol id="file-info">
           <small>To download, visit the
-            <a href="https://github.com/joshtype/bigFeet_bigData.git">
+              <a href="https://github.com/joshtype/bigFeet_bigData.git">
               GitHub Repo</a>to view these and all other project files.
-            <br>Or, right-click + 'Save target as' the below links.<br>
-            Download the original dataset from
-            <a href="https://www.kaggle.com/datasets/chemcnabb/bfro-
+              <br>Or, right-click + 'Save target as' the below links.<br>
+              Download the original dataset from <a href=
+              "https://www.kaggle.com/datasets/chemcnabb/bfro-
               bigfoot-sighting-report/">Kaggle</a> to compare values.
-          </small>
-          <br><br>
+            </small>
+            <br><br>
 
-          <li class="file-li">
-            <a href="dataset/bigfoot-sightings.csv" id="file-link">
-              bigfoot-sightings.csv</a>
-            <ul class="sub-ul">
-              <li class="sub-li">
-                The raw, uncleaned dataframe.
-              </li>
-            </ul>
-          </li>
+            <li class="file-li">
+              <a href="dataset/bigfoot-sightings.csv" id="file-link">
+                bigfoot-sightings.csv</a>
+              <ul class="sub-ul">
+                <li class="sub-li">
+                  The raw, uncleaned dataframe.
+                </li>
+              </ul>
+            </li>
 
-          <li class="file-li">
-            <a href="dataset/data_len.csv" id="file-link">
-              data_len.csv</a>
-            <ul class="sub-ul">
-              <li class="sub-li">
-                A single value representing the total length of the dataset.
-              </li>
-            </ul>
-          </li>
+            <li class="file-li">
+              <a href="dataset/data_len.csv" id="file-link">
+                data_len.csv</a>
+              <ul class="sub-ul">
+                <li class="sub-li">
+                  A single value representing the total length of the dataset.
+                </li>
+              </ul>
+            </li>
 
-          <li class="file-li">
-            <a href="dataset/day_data_uniques.csv" id="file-link">
-              day_data_uniques.csv</a>
-            <ul class="sub-ul">
-              <li class="sub-li">
-                Days on which sightings were recorded converted to a set.
-              </li>
-            </ul>
-          </li>
+            <li class="file-li">
+              <a href="dataset/day_data_uniques.csv" id="file-link">
+                day_data_uniques.csv</a>
+              <ul class="sub-ul">
+                <li class="sub-li">
+                  Days on which sightings were recorded converted to a set.
+                </li>
+              </ul>
+            </li>
 
-          <li class="file-li">
-            <a href="dataset/day_data.csv" id="file-link">
-              day_data.csv</a>
-            <ul class="sub-ul">
-              <li class="sub-li">
-                Raw values for days on which sightings were recorded.
-              </li>
-            </ul>
-          </li>
+            <li class="file-li">
+              <a href="dataset/day_data.csv" id="file-link">
+                day_data.csv</a>
+              <ul class="sub-ul">
+                <li class="sub-li">
+                  Raw values for days on which sightings were recorded.
+                </li>
+              </ul>
+            </li>
 
-          <li class="file-li">
-            <a href="lat.csv" id="file-link">lat.csv</a>
-            <ul class="sub-ul">
-              <li class="sub-li">
-                Raw values for latitudes at which sightings were recorded.
-              </li>
-            </ul>
-          </li>
+            <li class="file-li">
+              <a href="lat.csv" id="file-link">lat.csv</a>
+              <ul class="sub-ul">
+                <li class="sub-li">
+                  Raw values for latitudes at which sightings were recorded.
+                </li>
+              </ul>
+            </li>
 
-          <li class="file-li">
-            <a href="lon.csv" id="file-link">lon.csv</a>
-            <ul class="sub-ul">
-              <li class="sub-li">
-                Raw values for longitudes at which sightings were recorded.
-              </li>
-            </ul>
-          </li>
+            <li class="file-li">
+              <a href="lon.csv" id="file-link">lon.csv</a>
+              <ul class="sub-ul">
+                <li class="sub-li">
+                  Raw values for longitudes at which sightings were recorded.
+                </li>
+              </ul>
+            </li>
 
-          <li class="file-li">
-            <a href="dataset/month_data_uniques.csv" id="file-link">
-              month_data_uniques.csv</a>
-            <ul class="sub-ul">
-              <li class="sub-li">
-                Months on which sightings were recorded converted to a set.
-              </li>
-            </ul>
-          </li>
+            <li class="file-li">
+              <a href="dataset/month_data_uniques.csv" id="file-link">
+                month_data_uniques.csv</a>
+              <ul class="sub-ul">
+                <li class="sub-li">
+                  Months on which sightings were recorded converted to a set.
+                </li>
+              </ul>
+            </li>
 
-          <li class="file-li">
-            <a href="dataset/month_data.csv" id="file-link">
-              month_data.csv</a>
-            <ul class="sub-ul">
-              <li class="sub-li">
-                Raw values for months on which sightings were recorded.
-              </li>
-            </ul>
-          </li>
+            <li class="file-li">
+              <a href="dataset/month_data.csv" id="file-link">
+                month_data.csv</a>
+              <ul class="sub-ul">
+                <li class="sub-li">
+                  Raw values for months on which sightings were recorded.
+                </li>
+              </ul>
+            </li>
 
-          <li class="file-li">
-            <a href="datasetyear_data_uniques.csv" id="file-link">
-              year_data_uniques.csv
-            </a>
-            <ul class="sub-ul">
-              <li class="sub-li">
-                Years in which sightings were recorded converted to a set.
-              </li>
-            </ul>
-          </li>
+            <li class="file-li">
+              <a href="datasetyear_data_uniques.csv" id="file-link">
+                year_data_uniques.csv
+              </a>
+              <ul class="sub-ul">
+                <li class="sub-li">
+                  Years in which sightings were recorded converted to a set.
+                </li>
+              </ul>
+            </li>
 
-          <li class="file-li">
-            <a href="dataset/year_data.csv" id="file-link">
-              year_data.csv</a>
-            <ul class="sub-ul">
-              <li class="sub-li">
-                Raw values for years in which sightings were recorded.
-              </li>
-            </ul>
-          </li>
-        </ol>
+            <li class="file-li">
+              <a href="dataset/year_data.csv" id="file-link">
+                year_data.csv</a>
+              <ul class="sub-ul">
+                <li class="sub-li">
+                  Raw values for years in which sightings were recorded.
+                </li>
+              </ul>
+            </li>
+          </ol>
 
-        <!-- Javascript Steps -->
-        <p class="display-6 text-success" id="section-title">
-          Javascript Steps
-        </p>
-        <p id="section-intro">
-          Once data has been prepared, presenting accurate visualizations is
-          critical to helping users understand the data and infer valuable
-          insights.
-        </p><br><br>
+          <!-- Javascript Steps -->
+          <p class="display-6 text-success" id="section-title">
+            Javascript Steps
+          </p>
+          <p id="section-intro">
+            Once data has been prepared, presenting accurate visualizations is
+            critical to helping users understand the data and infer valuable
+            insights.
+          </p><br><br>
 
-        <legend class="text-success">Visualizing the Data:</legend>
-        <p id="visual-info">
-          I chose chart.js to visualize the data due to the easy to
-          understand syntax and functionality of the library.
-        </p>
+          <legend class="text-success">Visualizing the Data:</legend>
+          <p id="visual-info">
+            I chose chart.js to visualize the data due to the easy to
+            understand syntax and functionality of the library.
+          </p>
 
-        <legend class="text-success">Training the ML Model:</legend>
-        <p id="pred-info">
-          I trained the Tensorflow.js neural network on the dates
-          on which sightings were reported and the latitude/longitude
-          at which they were located. The ML output a prediction
-          based on this data for the likeliest month of the year,
-          day of the month, and latitude/longitude location for
-          sighting a bigfoot.
-        </p><br><br>
+          <legend class="text-success">Training the ML Model:</legend>
+          <p id="pred-info">
+            I trained the Tensorflow.js neural network on the dates
+            on which sightings were reported and the latitude/longitude
+            at which they were located. The ML output a prediction
+            based on this data for the likeliest month of the year,
+            day of the month, and latitude/longitude location for
+            sighting a bigfoot.
+          </p><br><br>
 
-      </div> <!-- close main content -->
-    </main> <!-- close main row -->
+        </div> <!-- close main content -->
+      </main> <!-- close main row -->
 
-    <!-- FOOTER: bottom row x 12 cols -->
-      <footer class="row text-white">
+      <!-- FOOTER: bottom row x 12 cols -->
+      <footer class="row text-dark">
         <!-- Left col: 4/12 cols, stacks for screens <= 576px  -->
         <section class="col-sm bg-success" id="footer-brand">
           <center>
-              <h6 class="text-uppercase fw-bold text-white my-5">
-                <img src="imgs/icons/logo-32.png" class="mx-3"
-                  alt="icon of bigfoot's silhoutte">
-                studentDesigns LLC
+            <h6 class="text-uppercase fw-bold text-white my-5">
+              <img src="imgs/icons/logo-32.png" class="mx-3"
+                alt="icon of bigfoot's silhoutte">
+              studentDesigns LLC
             </h6>
-            <p>
-              (
+            <p class="text-dark">
+              by @joshType
               <a href="https://github.com/joshtype?tab=repositories">
-                <img src="imgs/icons/footer-github.svg" 
+                <img src="imgs/icons/icon-github.svg" 
                   alt="logo of bigfoot's silhoutte">
               </a>
-              @joshType )
             </p>
           </center>
         </section>
@@ -361,16 +364,16 @@
         <section class="col-sm bg-success" id="footer-page-links">
           <!-- links -->
           <h6 class="text-uppercase fw-bold text-white my-1">Page Links</h6>
-          <p><a href="index.html" class="text-white">
-              Index Page</a></p>
-          <p><a href="1-walkthru.html" class="text-white">
-              Walkthrough Page</a></p>
-          <p><a href="2-visualize.html" class="text-white">
+          <p><a href="index.html" class="text-dark">
+            Index Page</a></p>
+          <p><a href="1-walkthru.html" class="text-dark">
+            Walkthrough Page</a></p>
+          <p><a href="2-visualize.html" class="text-dark">
             Visualizations Page</a></p>
-          <p><a href="3-predict.html" class="text-white">
+          <p><a href="3-predict.html" class="text-dark">
             Predictions Page</a></p>
           <p><a href="https://github.com/joshtype?tab=repositories"
-               class="text-white">
+                class="text-dark">
             GitHub Repo</a></p>
         </section>
 
@@ -378,51 +381,46 @@
         <section class="col-sm bg-success" id="footer-contact">
           <h6 class="text-uppercase fw-bold text-white my-1">Contact</h6>
           <p>
-            <img src="imgs/icons/footer-house.svg" alt="icon of house">
+            <img src="imgs/icons/icon-house.svg" alt="icon of house">
             123 Bigfoot Way, Cave City 
           </p>
           <p>
             <a href="mailto: gregory_joshua2@students.columbusstate.edu"
               id="mail-link">
-              <img src="imgs/icons/footer-mail.svg" alt="icon of envelope">
-            </a>
-            gregory_joshua2@students.columbusstate.edu
+              <img src="imgs/icons/icon-mail.svg" alt="icon of envelope">
+            </a>gregory_joshua2@students.columbusstate.edu
           </p>
           <p>
             <a href="tel: +15555555555" id="phone-link">
-              <img src="imgs/icons/footer-phone.svg" alt="icon of telephone">
-            </a>
-            +1 555.555.5555
+              <img src="imgs/icons/icon-phone.svg" alt="icon of telephone">
+            </a>+1 555.555.5555
           </p>
           <p>
             <a href="tel: +15555555555" id="phone-link">
-              <img src="imgs/icons/footer-fax.svg" alt="icon of fax machine">
-            </a>
-            +1 555.555.4444
+              <img src="imgs/icons/icon-fax.svg" alt="icon of fax machine">
+            </a>+1 555.555.4444
           </p>
         </section>
-        
+
         <!-- dynamically updating last modified datetime -->
         <section class="container-fluid bg-success" id="dynamic-datetime">
           <center>
             <small>
-              <p class="text-dark">
+              <p class="text-white">
+                Last updated <span id="update-date"></span>.
                 &copy;2023 Joshua Gregory. All images made using
-                <a href="https://starryai.com" class="text-dark">
+                <a href="https://starryai.com" class="text-white">
                   StarryAI.com</a>.
               </p>
-            <p class="text-dark" id="datetime">
-              Last updated
-              <span id="update-date"></span>
-            </p>
             </small>
           </center>
         </section>
       </footer> <!-- close footer row -->
-    
+
     </div>  <!-- close grid -->
-    <!-- Index Webform JS -->
-    <script src="script-idx-form.js"></script>
+
+    <!-- Slideshow full-sized img JS -->
+    <script src="scriptWalkthru.js"></script>
     <!-- Sitewide Datetime & Logo Click JS -->
     <script src="script-site-dateLogo.js"></script>
   </body>

@@ -20,7 +20,7 @@ const getPrediction = function() {
 
   model.fit(xs, ys, {epochs: 10}).then(() => {
     document.getElementById("pred1").innerHTML = 
-      "Prediction based on training data = " + 
+      "Prediction based on sample training data = " + 
       model.predict(tf.tensor2d([5], [1, 1]));
   });
 };

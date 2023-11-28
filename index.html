@@ -20,8 +20,8 @@
     </script>
 
     <!-- page title and favicon -->
-    <title>bigIndex</title>
-    <link rel="icon" type="image/x-icon" href="imgs/icons/bigfoot-icon.png">
+    <title>Index</title>
+    <link rel="icon" type="image/x-icon" href="imgs/icons/logo-32.png">
   </head>
 
   <body>
@@ -212,22 +212,21 @@
       </main>  <!-- close main row -->
 
       <!-- FOOTER: bottom row x 12 cols -->
-      <footer class="row text-white">
+      <footer class="row text-dark">
         <!-- Left col: 4/12 cols, stacks for screens <= 576px  -->
         <section class="col-sm bg-success" id="footer-brand">
           <center>
-              <h6 class="text-uppercase fw-bold text-white my-5">
-                <img src="imgs/icons/logo-32.png" class="mx-3"
-                  alt="icon of bigfoot's silhoutte">
-                studentDesigns LLC
+            <h6 class="text-uppercase fw-bold text-white my-5">
+              <img src="imgs/icons/logo-32.png" class="mx-3"
+                alt="icon of bigfoot's silhoutte">
+            studentDesigns LLC
             </h6>
-            <p>
-              (
+            <p class="text-dark">
+              by @joshType
               <a href="https://github.com/joshtype?tab=repositories">
-                <img src="imgs/icons/footer-github.svg" 
+                <img src="imgs/icons/icon-github.svg" 
                   alt="logo of bigfoot's silhoutte">
               </a>
-              @joshType )
             </p>
           </center>
         </section>
@@ -236,16 +235,16 @@
         <section class="col-sm bg-success" id="footer-page-links">
           <!-- links -->
           <h6 class="text-uppercase fw-bold text-white my-1">Page Links</h6>
-          <p><a href="index.html" class="text-white">
-              Index Page</a></p>
-          <p><a href="1-walkthru.html" class="text-white">
-              Walkthrough Page</a></p>
-          <p><a href="2-visualize.html" class="text-white">
+          <p><a href="index.html" class="text-dark">
+            Index Page</a></p>
+          <p><a href="1-walkthru.html" class="text-dark">
+            Walkthrough Page</a></p>
+          <p><a href="2-visualize.html" class="text-dark">
             Visualizations Page</a></p>
-          <p><a href="3-predict.html" class="text-white">
+          <p><a href="3-predict.html" class="text-dark">
             Predictions Page</a></p>
           <p><a href="https://github.com/joshtype?tab=repositories"
-               class="text-white">
+                class="text-dark">
             GitHub Repo</a></p>
         </section>
 
@@ -253,51 +252,46 @@
         <section class="col-sm bg-success" id="footer-contact">
           <h6 class="text-uppercase fw-bold text-white my-1">Contact</h6>
           <p>
-            <img src="imgs/icons/footer-house.svg" alt="icon of house">
+            <img src="imgs/icons/icon-house.svg" alt="icon of house">
             123 Bigfoot Way, Cave City 
           </p>
           <p>
             <a href="mailto: gregory_joshua2@students.columbusstate.edu"
               id="mail-link">
-              <img src="imgs/icons/footer-mail.svg" alt="icon of envelope">
-            </a>
-            gregory_joshua2@students.columbusstate.edu
+              <img src="imgs/icons/icon-mail.svg" alt="icon of envelope">
+            </a>gregory_joshua2@students.columbusstate.edu
           </p>
           <p>
             <a href="tel: +15555555555" id="phone-link">
-              <img src="imgs/icons/footer-phone.svg" alt="icon of telephone">
-            </a>
-            +1 555.555.5555
+              <img src="imgs/icons/icon-phone.svg" alt="icon of telephone">
+            </a>+1 555.555.5555
           </p>
           <p>
             <a href="tel: +15555555555" id="phone-link">
-              <img src="imgs/icons/footer-fax.svg" alt="icon of fax machine">
-            </a>
-            +1 555.555.4444
+              <img src="imgs/icons/icon-fax.svg" alt="icon of fax machine">
+            </a>+1 555.555.4444
           </p>
         </section>
-        
+
         <!-- dynamically updating last modified datetime -->
         <section class="container-fluid bg-success" id="dynamic-datetime">
           <center>
             <small>
-              <p class="text-dark">
+              <p class="text-white">
+                Last updated <span id="update-date"></span>.
                 &copy;2023 Joshua Gregory. All images made using
-                <a href="https://starryai.com" class="text-dark">
+                <a href="https://starryai.com" class="text-white">
                   StarryAI.com</a>.
               </p>
-            <p class="text-dark" id="datetime">
-              Last updated
-              <span id="update-date"></span>
-            </p>
             </small>
           </center>
         </section>
       </footer> <!-- close footer row -->
-    
+
     </div>  <!-- close grid -->
+    
     <!-- Index Webform JS -->
-    <script src="script-idx-form.js"></script>
+    <script src="scriptWebForm.js"></script>
     <!-- Sitewide Datetime & Logo Click JS -->
     <script src="script-site-dateLogo.js"></script>
   </body>
